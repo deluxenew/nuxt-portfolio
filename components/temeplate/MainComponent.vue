@@ -1,7 +1,7 @@
 <template>
    <div class="main wrapper block">
-      <section class="content">
-         <slot/>
+      <section class="main-content">
+            <slot/>
       </section>
    </div>
 </template>

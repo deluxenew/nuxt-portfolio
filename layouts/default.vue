@@ -4,9 +4,8 @@
 
       <div class="main-wrap">
          <main-component>
-            <transition name="fade" mode="out-in">
+
                <nuxt/>
-            </transition>
 
          </main-component>
          <sidebar-component/>
@@ -22,7 +21,8 @@
     import FooterComponent from '../components/temeplate/FooterComponent'
 
     export default {
-        components: {FooterComponent, SidebarComponent, MainComponent, HeaderComponent}
+        components: {FooterComponent, SidebarComponent, MainComponent, HeaderComponent},
+
     }
 </script>
 

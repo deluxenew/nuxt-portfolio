@@ -1,5 +1,5 @@
 <template>
-    <div class="projects">
+    <div class="page-content">
        <h1 class="title">
           Мои проекты и разработки
        </h1>
@@ -8,7 +8,11 @@
 
 <script>
     export default {
-        name: "projects"
+        name: "ProjectsPage",
+        transition: {
+            name: 'animate_fading',
+            mode: 'out-in'
+        }
     }
 </script>
 

@@ -1,5 +1,10 @@
 @import 'normalize';
 
+h1 {
+   color: $colorTitle;
+   transition: $trs;
+}
+
 #app {
    display: flex;
    flex-direction: column;
@@ -11,10 +16,12 @@
 }
 
 .main-wrap {
+   background-color: $background;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    flex-grow: 1;
+   transition: $trs;
 }
 
 .link {
@@ -260,16 +267,16 @@
    }
 }
 
-.content {
+.main-content {
    width: 100%;
    height: 100%;
-   background: $white;
+   background-color: $background;
    border-radius: $block-radius;
-   padding: 40px;
    box-sizing: border-box;
    position: relative;
    overflow: visible;
    border: 0px solid transparent;
+   transition: $trs;
 
 
    &:before, &:after {
@@ -300,4 +307,36 @@
          opacity: 1;
       }
    }
+}
+
+.page-content {
+   padding: 40px;
+}
+
+:root {
+   --colorTitle: #1C0E42;
+   --color: #243746;
+   --color-primary: #158876;
+   --color-secondary: #0e2233;
+   --background: #f3f5f4;
+   --bg-secondary: #fff;
+   --border-color: #ddd;
+}
+
+.dark-mode {
+   --colorTitle: #f3f5f4;
+   --color: #ebf4f1;
+   --color-primary: #41b38a;
+   --color-secondary: #fdf9f3;
+   --background: #A86226;
+   --bg-secondary: #071521;
+   --border-color: #0d2538;
+}
+.sepia-mode {
+   --colorTitle: #1C0E42;
+   --color: #433422;
+   --color-secondary: #504231;
+   --background: #f1e7d0;
+   --bg-secondary: #eae0c9;
+   --border-color: #ded0bf;
 }

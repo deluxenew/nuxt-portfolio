@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="page-content">
     <h1 class="title">
       Приветствую Вас, мой дорогой посетитель :)
     </h1>
@@ -46,6 +46,11 @@
 <script>
 
 export default {
-  components: { }
+    name: 'IndexPage',
+  components: { },
+    transition: {
+        name: 'animate_fading',
+        mode: 'out-in'
+    }
 }
 </script>

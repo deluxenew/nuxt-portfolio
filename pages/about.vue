@@ -1,5 +1,5 @@
 <template>
-    <div class="about-me">
+    <div class="page-content">
        <h1 class="title">
           Информация обо мне
        </h1>
@@ -8,7 +8,11 @@
 
 <script>
     export default {
-        name: "about"
+        name: "AboutPage",
+        transition: {
+            name: 'animate_fading',
+            mode: 'out-in'
+        }
     }
 </script>
 

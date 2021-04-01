@@ -1,6 +1,9 @@
 $font: 'TTNorms', 'Helvetica', 'Arial', sans-serif;
 
 $white: #ffffff;
+$background: var(--background, #f3f5f4);
+$colorTitle: var(--colorTitle, #1C0E42);
+
 $default: #1C0E42;
 
 $main-color: #FFB26F;
@@ -31,3 +34,5 @@ $padding-m: 10px;
 
 $block-radius: 10px;
 $button-radius: 6px;
+
+
