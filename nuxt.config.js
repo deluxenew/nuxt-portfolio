@@ -37,8 +37,8 @@ export default {
       '@nuxtjs/color-mode'
    ],
    colorMode: {
-      preference: 'system', // default value of $colorMode.preference
-      fallback: 'light', // fallback value if not system preference found
+      preference: 'system',
+      fallback: 'light',
       hid: 'nuxt-color-mode-script',
       globalName: '__NUXT_COLOR_MODE__',
       componentName: 'ColorScheme',
@@ -70,28 +70,28 @@ export default {
                      src: '@/assets/fonts/TTNorms-Bold',
                      fontWeight: 700,
                      fontStyle: 'normal',
-                     fontDisplay: 'auto'
+                     fontDisplay: 'swap'
                   },
                   {
                      preload: true,
                      src: '@/assets/fonts/TTNorms-Regular',
                      fontWeight: 400,
                      fontStyle: 'normal',
-                     fontDisplay: 'auto'
+                     fontDisplay: 'swap'
                   },
                   {
                      preload: false,
                      src: '@/assets/fonts/TTNorms-Medium',
                      fontWeight: 500,
                      fontStyle: 'normal',
-                     fontDisplay: 'auto'
+                     fontDisplay: 'swap'
                   },
                   {
                      preload: false,
                      src: '@/assets/fonts/TTNorms-Light',
                      fontWeight: 300,
                      fontStyle: 'normal',
-                     fontDisplay: 'auto'
+                     fontDisplay: 'swap'
                   }
                ]
             },
@@ -104,12 +104,10 @@ export default {
    build: {
       extend(config) {
          config.resolve.alias['@cmp'] = '@@/components'
-         config.resolve.alias['@imgs'] = '@@/assets/img/ds'
-         config.resolve.alias['@store'] = '@@/assets/DSContent.js'
          config.resolve.alias['@const'] = '@@/constants'
       },
       analyze: debug,
-      // extractCSS: !debug,
+      extractCSS: !debug,
       optimizeCSS: !debug,
       splitChunks: {
          layouts: true,

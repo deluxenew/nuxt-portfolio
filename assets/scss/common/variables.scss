@@ -3,19 +3,22 @@ $font: 'TTNorms', 'Helvetica', 'Arial', sans-serif;
 $white: #ffffff;
 $background: var(--background, #f3f5f4);
 $colorTitle: var(--colorTitle, #1C0E42);
+$logo: var(--pathLogo, #9B9B9B);
+
+$defaultText: var(--defaultText, #222222);
 
 $default: #1C0E42;
 
-$main-color: #FFB26F;
-$main-color-light: #C1956F;
-$main-color-dark: #A86226;
+$main-color: var(--main-color, #C1956F);
+$main-color-light: var(--main-color-light, #FFB26F);
+$main-color-dark: var(--main-color-dark, #A86226);
 
-$primary: #FFD06F;
-$primary-light: #C1A66F;
+$primary-light: #FFD06F;
+$primary: #C1A66F;
 $primary-dark: #A87E26;
 
-$secondary: #FF736F;
-$secondary-light: #C1716F;
+$secondary-light: #FF736F;
+$secondary: #C1716F;
 $secondary-dark: #A82926;
 
 $green: #00CC00;

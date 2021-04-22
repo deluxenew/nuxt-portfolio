@@ -5,10 +5,16 @@ h1 {
    transition: $trs;
 }
 
+p, ul, li {
+   color: $defaultText;
+   transition: $trs;
+}
+
 #app {
    display: flex;
    flex-direction: column;
    min-height: 100vh;
+   min-width: 100vw;
 
    * {
       font-family: $font;
@@ -21,11 +27,12 @@ h1 {
    flex-direction: row;
    justify-content: space-between;
    flex-grow: 1;
+   min-width: 100vw;
    transition: $trs;
 }
 
 .link {
-   color: $secondary-light;
+   color: $secondary;
    transition: $trs;
    position: relative;
    text-decoration: none;
@@ -49,13 +56,13 @@ h1 {
       left: 0;
       width: 100%;
       height: 1px;
-      background: $secondary;
+      background: $secondary-light;
       opacity: 0;
       transition: $trs;
    }
 
    &:hover {
-      color: $secondary;
+      color: $secondary-light;
       &:before {
          opacity: 0;
       }
@@ -136,7 +143,7 @@ h1 {
    color: $white;
    padding: 0 $padding-m;
    position: relative;
-   background: linear-gradient(to right, $secondary-light, $secondary-dark);
+   background: linear-gradient(to right, $secondary, $secondary-dark);
    z-index: 1;
    width: 150px;
    height: 50px;
@@ -148,7 +155,7 @@ h1 {
       right: 0;
       top: 0;
       bottom: 0;
-      background: linear-gradient(to right, $secondary-light, $secondary-dark);
+      background: linear-gradient(to right, $secondary, $secondary-dark);
       border-radius: inherit;
       opacity: 1;
       transition: $trs;
@@ -162,12 +169,12 @@ h1 {
       right: 0;
       top: 0;
       bottom: 0;
-      background: linear-gradient(to right, $secondary-light, $secondary, $secondary-dark);
+      background: linear-gradient(to right, $secondary, $secondary-light, $secondary-dark);
       border-radius: inherit;
       opacity: 0;
       transition: $trs;
       z-index: -1;
-      box-shadow: 0px 10px 20px rgba($secondary, .5);
+      box-shadow: 0px 10px 20px rgba($secondary-light, .5);
    }
 
    &:hover {
@@ -207,28 +214,28 @@ h1 {
    }
 
    &.primary {
-      background: linear-gradient(to right, $primary, $primary-dark);
+      background: linear-gradient(to right, $primary-light, $primary-dark);
 
       &:before {
-         background: linear-gradient(to right, $primary, $primary-dark);
+         background: linear-gradient(to right, $primary-light, $primary-dark);
       }
 
       &:after {
-         background: linear-gradient(to right, $primary, $primary-light, $primary-dark);
-         box-shadow: 0px 10px 20px rgba($primary-light, .5);
+         background: linear-gradient(to right, $primary-light, $primary, $primary-dark);
+         box-shadow: 0px 10px 20px rgba($primary, .5);
       }
    }
 
    &.main {
-      background: linear-gradient(to right, $main-color, $main-color-dark);
+      background: linear-gradient(to right, $main-color-light, $main-color-dark);
 
       &:before {
-         background: linear-gradient(to right, $main-color, $main-color-dark);
+         background: linear-gradient(to right, $main-color-light, $main-color-dark);
       }
 
       &:after {
-         background: linear-gradient(to right, $main-color, $main-color-light, $main-color-dark);
-         box-shadow: 0px 10px 20px rgba($main-color-light, .5);
+         background: linear-gradient(to right, $main-color-light, $main-color, $main-color-dark);
+         box-shadow: 0px 10px 20px rgba($main-color, .5);
       }
    }
 }
@@ -239,7 +246,7 @@ h1 {
          fill: $primary-dark;
 
          &:first-child {
-            fill: $primary-light;
+            fill: $primary;
          }
       }
 
@@ -248,7 +255,7 @@ h1 {
             fill: $secondary-dark;
 
             &:first-child {
-               fill: $secondary-light;
+               fill: $secondary;
             }
          }
       }
@@ -259,7 +266,7 @@ h1 {
                fill: $primary-dark;
 
                &:first-child {
-                  fill: $primary-light;
+                  fill: $primary;
                }
             }
          }
@@ -287,7 +294,7 @@ h1 {
       top: 0;
       bottom: 0;
       margin: -10px;
-      background: linear-gradient(to right, $main-color-light, $main-color-dark);
+      background: linear-gradient(to right, $main-color, $main-color-dark);
       border-radius: inherit;
       opacity: .5;
       transition: $trs;
@@ -295,7 +302,7 @@ h1 {
    }
 
    &:after {
-      background: linear-gradient(to right, $primary-dark , $primary-light);
+      background: linear-gradient(to right, $primary-dark , $primary);
       opacity: .5;
    }
 
@@ -314,29 +321,41 @@ h1 {
 }
 
 :root {
-   --colorTitle: #1C0E42;
-   --color: #243746;
-   --color-primary: #158876;
-   --color-secondary: #0e2233;
    --background: #f3f5f4;
-   --bg-secondary: #fff;
-   --border-color: #ddd;
+   --colorTitle: #1C0E42;
+   --pathLogo: #525252;
+   --defaultText: #222222;
+   --main-color: #C1956F;
+   --main-color-light: #FFB26F;
+   --main-color-dark: #A86226;
+}
+
+.light-mode {
+   --background: #f3f5f4;
+   --colorTitle: #1C0E42;
+   --pathLogo: #525252;
+   --defaultText: #222222;
+   --main-color: #C1956F;
+   --main-color-light: #FFB26F;
+   --main-color-dark: #A86226;
 }
 
 .dark-mode {
+   --background: #451e00;
    --colorTitle: #f3f5f4;
-   --color: #ebf4f1;
-   --color-primary: #41b38a;
-   --color-secondary: #fdf9f3;
-   --background: #A86226;
-   --bg-secondary: #071521;
-   --border-color: #0d2538;
+   --pathLogo: #f3f5f4;
+   --defaultText: #f3f5f4;
+   --main-color: #C1956F;
+   --main-color-light: #000000;
+   --main-color-dark: #A86226;
 }
+
 .sepia-mode {
-   --colorTitle: #1C0E42;
-   --color: #433422;
-   --color-secondary: #504231;
    --background: #f1e7d0;
-   --bg-secondary: #eae0c9;
-   --border-color: #ded0bf;
+   --colorTitle: #1C0E42;
+   --pathLogo: #9B9B9B;
+   --defaultText: #222222;
+   --main-color: #C1956F;
+   --main-color-light: #FFB26F;
+   --main-color-dark: #A86226;
 }

@@ -1,5 +1,6 @@
 .header {
-    background-color: $main-color;
+   background-color: $main-color-light;
    justify-content: space-between;
    height: 100px;
+   transition: $trs;
 }

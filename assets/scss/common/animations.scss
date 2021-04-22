@@ -70,3 +70,28 @@
 
    }
 }
+
+.w-expand-enter-active {
+   animation: .3s w-expand;
+}
+
+.w-expand-leave-active {
+   animation: .3s w-expand reverse;
+}
+
+.w-expand-enter {
+   width: 100%;
+}
+
+.w-expand-leave-to {
+   width: 0%;
+}
+
+@keyframes w-expand {
+   from {
+      width: 0%;
+   }
+   to {
+      width: 100%;
+   }
+}

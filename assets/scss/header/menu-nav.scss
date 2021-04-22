@@ -15,14 +15,14 @@
    }
 
    .list-item {
-      background: $primary;
+      background: $primary-light;
       margin-top: 5px;
       text-align: center;
       height: 3em;
       width: 4em;
       vertical-align: middle;
       line-height: 1;
-      border-bottom: 1px solid $main-color-light;
+      border-bottom: 1px solid $main-color;
       border-radius: 0 $button-radius 0 0;
       position: relative;
       display: flex;
@@ -30,14 +30,14 @@
       justify-content: center;
       flex-direction: column;
       text-decoration: none;
-      box-shadow: -1.5em 1em 10px $main-color-light;
-      transition: all .3s ease-in;
+      box-shadow: -1.5em 1em 10px $main-color;
+      transition: $trs;
 
       &:hover {
-         background: $secondary;
+         background: $secondary-light;
          transform: translate(.9em, -.9em);
-         transition: all .25s ease-in;
          box-shadow: -2em 1.5em 15px $main-color-dark;
+         transition: $trs;
 
          &:before,
          &:after {
@@ -45,7 +45,7 @@
          }
 
          &:before {
-            background: $secondary-light;
+            background: $secondary;
             width: 1em;
             top: .5em;
             left: -1em;
@@ -69,7 +69,7 @@
          }
 
          .title {
-            visibility: visible;
+            opacity: 1;
          }
       }
 
@@ -91,7 +91,7 @@
 
       &:before {
          height: 3em;
-         background: $primary-light;
+         background: $primary;
          top: .25em;
          left: -.5em;
          transform: skewY(-45deg);
@@ -110,7 +110,7 @@
 
       .title {
          color: $white;
-         visibility: hidden;
+         opacity: 0;
          transition: $trs;
          position: absolute;
          width: 100%;

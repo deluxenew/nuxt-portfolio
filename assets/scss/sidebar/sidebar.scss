@@ -1,9 +1,11 @@
 .sidebar {
    position: relative;
-   background-color: $main-color;
-   transition: $trs;
+   background-color: $main-color-light;
    padding: 10px;
+   width: 50px;
    border-radius: 0 0 0 80%;
+   transition: $trs;
+   box-sizing: border-box;
 
    &:before {
       content: '';
@@ -12,7 +14,8 @@
       top: 0;
       width: 10px;
       height: 10px;
-      background-color: $main-color;
+      background-color: $main-color-light;
+      transition: $trs;
    }
 
    &:after {
@@ -29,6 +32,8 @@
 
    .icon {
       cursor: pointer;
+      margin: 0 auto;
+      padding-bottom: 20px;
 
       .settings {
          width: 25px;
@@ -40,9 +45,13 @@
          }
 
          &.opened {
-            width: 100px;
+            width: 50px;
             height: 50px;
          }
       }
+   }
+
+   &.block {
+      width: 140px;
    }
 }
