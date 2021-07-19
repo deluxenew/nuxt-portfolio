@@ -10,7 +10,8 @@
     }
 </script>
 
-<style>
+<style lang="scss">
+
    .beer-slider {
       display: inline-block;
       overflow: hidden;
@@ -9541,4 +9542,5 @@
          opacity: 1
       }
    }
+
 </style>

@@ -15,6 +15,7 @@
          <faq-block/>
          <home-contact/>
       </div>
+      <footer-l/>
    </div>
 </template>
 
@@ -31,10 +32,12 @@
     import ClientsLogosSlider from "../components/landing/sections/ClientsLogosSlider";
     import FaqBlock from "../components/landing/sections/FaqBlock";
     import HomeContact from "../components/landing/sections/HomeContact";
+    import FooterL from "../components/landing/footer/FooterL";
 
     export default {
         name: "landing-nuxt",
         components: {
+            FooterL,
             HomeContact,
             FaqBlock,
             ClientsLogosSlider,

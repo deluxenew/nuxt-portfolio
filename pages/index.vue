@@ -37,14 +37,16 @@
         В меню настроек можно выбрать удобную для себя цветовую схему
       </li>
     </ul>
+     <transition-group-expand />
   </div>
 </template>
 
 <script>
 
+import TransitionGroupExpand from "../components/content/TransitionGroupExpand";
 export default {
     name: 'IndexPage',
-  components: { },
+  components: {TransitionGroupExpand },
     transition: {
         name: 'animate_fading',
         mode: 'out-in'
